@@ -9,5 +9,10 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.x",
+    "postcss": "^8.x",
+    "autoprefixer": "^10.x"
   }
 }
