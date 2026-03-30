@@ -16,7 +16,7 @@ export default function ChatUI({ userId }) {
 
   return (
     <div className="p-4 border mt-4">
-      <h2 className="text-xl mb-2">AI Advisor</h2>
+      <h2 className="text-xl mb-2"></h2>
 
       <div className="h-40 overflow-y-auto border p-2 mb-2">
         {messages.map((m, i) => (

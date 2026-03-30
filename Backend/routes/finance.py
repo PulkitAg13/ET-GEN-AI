@@ -31,10 +31,24 @@ def get_score(user_id: int, db: Session = Depends(get_db)):
 
     return {"score": score}
 
+
 @router.get("/sip/{user_id}")
 def sip_plan(user_id: int, db: Session = Depends(get_db)):
+    
     fin = db.query(Finance).filter(Finance.user_id == user_id).first()
 
-    sip = calculate_sip(5000, 12, 60)
+    if not fin:
+        return {"error": "Finance data not found"}
 
-    return {"future_value": sip}
+    # Use real user data instead of hardcoded values
+    sip = calculate_sip(
+        fin.savings,   # monthly investment
+        12,            # rate (you can customize later)
+        60             # months
+    )
+
+    return {
+        "user_id": user_id,
+        "monthly_investment": fin.savings,
+        "future_value": sip
+    }

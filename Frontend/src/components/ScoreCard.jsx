@@ -15,7 +15,7 @@ export default function ScoreCard({ userId }) {
 
   return (
     <div className="p-4 border mt-4">
-      <h2 className="text-xl">Money Health Score</h2>
+      <h2 className="text-xl"></h2>
       <p className="text-3xl mt-2">{score ?? "Loading..."}</p>
     </div>
   );

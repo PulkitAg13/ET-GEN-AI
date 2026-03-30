@@ -20,7 +20,7 @@ export default function FinanceForm({ userId, onDone }) {
 
   return (
     <div className="p-4 border rounded">
-      <h2 className="text-xl mb-3">Enter Financial Data</h2>
+      <h2 className="text-xl mb-3"></h2>
 
       {Object.keys(form).map((key) => (
         <input
